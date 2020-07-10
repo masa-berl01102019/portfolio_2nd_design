@@ -1,0 +1,64 @@
+/* random_func_UI */
+#grid_container {
+  @include grid_common;
+  grid-template:
+  "main_menu" auto
+  "random_btn" auto
+  "random_advertisement" auto
+  "random_transform" auto
+  / 100%;
+  -webkit-text-size-adjust: 100%;
+  > #cell_0 {
+    grid-area: main_menu;
+  }
+  > #cell_1 {
+    grid-area: random_btn;
+  }
+  > #cell_2 {
+    grid-area: random_advertisement;
+  }
+  > #cell_3 {
+    grid-area: random_transform;
+  }
+}
+.description {
+  width: 310px;
+  margin: 40px auto;
+  > p {
+    margin-top: 0;
+  }
+}
+
+/* random_button */
+#random_btn {
+  width: 300px;
+  margin: 40px auto;
+  background-color: #2ea7e1;
+  border-radius: 50%;
+  font-size: 55px;
+  font-weight: bold;
+  color: #fff;
+  line-height: 300px;
+  cursor: pointer;
+  box-shadow: 0 10px 0 #266887;
+  user-select: none;
+  &:hover {
+    opacity: 0.8;
+  }
+  &:active {
+    margin-top: 45px;
+    box-shadow: 0 5px 0 #266887;
+  }
+}
+
+/* random_advertisement */
+#random_ad {
+  width: 300px;
+  height: 200px;
+  margin: 0 auto;
+  background: #fff;
+  box-sizing: border-box;
+  > img {
+    width: 100%;
+  }
+}

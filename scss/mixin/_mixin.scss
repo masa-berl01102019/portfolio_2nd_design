@@ -1,0 +1,39 @@
+// layout
+@mixin grid_common {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+  min-height: 100vh;
+  position: relative;
+}
+@mixin pc {
+  @media (min-width: ($pc_width)) {
+    @content;
+  }
+}
+@mixin tablet {
+  @media (min-width: ($tablet_width)) {
+    @content;
+  }
+}
+@mixin sp {
+  @media (max-width: ($sp_width)) {
+    @content;
+  }
+}
+
+// home.scss用
+@mixin center {
+  left: 0;
+  right: 0;
+  margin:  0 auto;
+}
+@mixin centeral {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}

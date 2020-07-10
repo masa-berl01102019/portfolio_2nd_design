@@ -1,0 +1,9 @@
+/* headline.scss */
+.headline {
+  font-size: $base_font_size_PC;
+  line-height: 2;
+  color: $base_letter_color;
+  background: $accent_background_color;
+  margin-bottom: 32px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}

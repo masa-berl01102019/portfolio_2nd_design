@@ -1,0 +1,420 @@
+/* home.scss */
+
+#cell_1 {
+  position: fixed;
+  z-index: -1;
+  width: 100vw;
+  height: 100vh;
+  img {
+    position: absolute;
+    top: -3%;
+    left: -12%;
+    width: 75vw;
+    height: 64vw;
+    opacity: 0.3;
+  }
+}
+.vbox {
+  position: relative;
+  z-index: 1;
+  .pic, .pic_cover {
+    position: absolute;
+  }
+  .pic_cover {
+    background: $accent_background_color;
+  }
+  .pic_3 {
+    background: url($main_img3)  center / cover no-repeat;
+  }
+  .pic_4 {
+    background: url($main_img4)  center / cover no-repeat;
+  }
+  .pic_5 {
+    background: url($main_img5)  center / cover no-repeat;
+  }
+  .pic_6 {
+    background: url($main_img6)  center / cover no-repeat;
+  }
+  h1 {
+    font-size: 7vh;
+    letter-spacing: 3px;
+    text-shadow: 5px 5px 3px rgba(0,0,0,0.4);
+  }
+  .fade_out {
+    position: absolute;
+  }
+  p {
+    font-weight: unset;
+    position: absolute;
+  }
+  .btn {
+    position: absolute;
+    border-radius: 10% / 50%;
+    background: $accent_background_color;
+    color: white !important;
+  }
+}
+
+// $n: 1;
+// $e: 80;
+// @for $n from 2 through 6 {
+//   .c#{$n} {
+//     background: rgb($e + 40, 10 ,$e / 2 * $n );
+//     opacity: 0.8;
+//   }
+// }
+
+@include sp {
+  #grid_container {
+    // position: relative; ----------要確認
+    // overflow-x: hidden;　----------要確認
+    -webkit-overflow-scrolling: touch;
+    height: 100vh;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+    > #cell_2 {
+      scroll-snap-align: start;
+    }
+    > #cell_3 {
+      scroll-snap-align: start;
+    }
+    > #cell_4 {
+      scroll-snap-align: start;
+    }
+    > #cell_5 {
+      scroll-snap-align: start;
+    }
+    > #cell_6 {
+      scroll-snap-align: start;
+    }
+  }
+  .vbox {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    .pic, .pic_cover {
+      width: 80%;
+      height: 70vw;
+      top: 16%;
+      @include center;
+    }
+    .pic_cover {
+      z-index: 1;
+      transform-origin: left;
+      transition-duration: 1s;
+    }
+    h1 {
+      z-index: 2;
+    }
+    .fade_out {
+      top: 45%;
+      left: -100%;
+      transition-duration: 1s;
+    }
+    p {
+      top: 57%;
+      left: 5%;
+      text-align: left;
+      font-size: 6vw;
+    }
+    .btn {
+      top: 76%;
+      @include center;
+      width: 40vw;
+      line-height: 10vw;
+      font-size: 5vw;
+    }
+  }
+  // animation for smart phone
+  .hidden {
+    opacity: 0;
+    transition: 1s opacity;
+    transition-delay: .7s;
+  }
+  .showAnimation {
+    opacity: 1;
+  }
+  .open_pic_cover {
+    transform: scaleX(0);
+  }
+  .fade_in {
+    left: 5% !important;
+  }
+}
+
+@include tablet {
+  #grid_container {
+    @include grid_common;
+    grid-template:
+    "main_menu" auto
+    "background_animation" auto
+    "animation" auto
+    "portfolio" auto
+    "about" auto
+    "blog" auto
+    "contact" auto
+    / 100%;
+    > #cell_0 {
+      grid-area: main_menu;
+    }
+    > #cell_1 {
+      grid-area: background_animation;
+      top: 30%;
+      left: 40%;
+    }
+    > #cell_2 {
+      grid-area: animation;
+    }
+    > #cell_3 {
+      grid-area: about;
+    }
+    > #cell_4 {
+      grid-area: portfolio;
+    }
+    > #cell_5 {
+      grid-area: blog;
+    }
+    > #cell_6 {
+      grid-area: contact;
+    }
+  }
+  .vbox {
+    width: 100%;
+    // height: 80vh;
+    height: 80vmin;
+    .pic {
+      width: 60vmin;
+      height: 50vmin;
+    }
+    .pic_cover {
+      z-index: 0;
+      margin: 0;
+      background: linear-gradient(60deg, rgba(162, 55, 55, 0.68), rgba(148, 113, 113, 0.6));
+    }
+    p {
+      font-size: 4.5vmin;
+    }
+    .btn {
+      font-size: 4.5vmin;
+      line-height: 7.5vmin;
+      width: 20vw;
+    }
+    .pic_3 {
+      box-shadow: 10px 10px 8px rgba(0,0,0,0.4);
+    }
+    .pic_5 {
+      box-shadow: -10px 10px 8px rgba(0, 0, 0, 0.4);
+    }
+    .pic_6 {
+      box-shadow: 10px 10px 8px rgba(0,0,0,0.4);
+    }
+  }
+  .vbox.c2 {
+    width: 100%;
+    height: 100vh;
+  }
+  .c3 {
+    .pic_cover {
+      width: 60vmin;
+      height: 72vmin;
+      top: 5%;
+      right: 3%;
+      z-index: 0;
+    }
+    .pic {
+      top: 11%;
+      right: 9%;
+    }
+    .fade_out {
+      right: 13%;
+      top: 40%;
+    }
+    p {
+      top: 58%;
+      right: 13%;
+      text-align: right;
+    }
+    .btn {
+      top: 84%;
+      right: 13%;
+    }
+  }
+  .c4 {
+    .pic_cover {
+      width: 80vmin;
+      height: 50vmin;
+      top: 37%;
+      @include center;
+    }
+    .pic {
+      width: 80vmin;
+      height: 60vmin;
+      top: 0;
+      @include center;
+    }
+    .fade_out {
+      top: 10%;
+      left: 0;
+      right: 0;
+    }
+    p {
+      top: 62%;
+      left: 0%;
+      right: 0%;
+      text-align: center;
+    }
+    .btn {
+      top: 88%;
+      @include center;
+    }
+  }
+  .c5 {
+    .pic_cover {
+      width: 60vmin;
+      height: 72vmin;
+      top: 5%;
+      left: 3%;
+      z-index: 0;
+    }
+    .pic {
+      top: 11%;
+      left: 9%;
+    }
+    .fade_out {
+      left: 13%;
+      top: 40%;
+    }
+    p {
+      top: 58%;
+      left: 13%;
+      text-align: left;
+    }
+    .btn {
+      top: 84%;
+      left: 13%;
+    }
+  }
+  .c6 {
+    .pic_cover {
+      width: 100%;
+      height: 50vmin;
+      top: 30%;
+    }
+    .pic {
+      top: 20%;
+      right: 15%;
+    }
+    .fade_out {
+      top: 29%;
+      left: 3%;
+    }
+    p {
+      top: 45%;
+      left: 3%;
+      text-align: left;
+    }
+    .btn {
+      top: 72%;
+      left: 3%;
+    }
+  }
+  .charcter_Ani {
+    position: absolute;
+    top: 35%;
+    @include center;
+    padding: 0;
+  }
+  .down_mark {
+    bottom: 8%;
+  }
+}
+
+@include pc {
+  #grid_container {
+    grid-template:
+    "main_menu main_menu main_menu main_menu" auto
+    "background_animation background_animation background_animation background_animation" auto
+    "animation animation animation animation" 100vh
+    "about portfolio blog contact" 100vh /
+    25% 25% 25% 25%;
+    overflow-y: hidden;
+    > #cell_1 {
+      top: -30%;
+      left: 50%;
+      img {
+        top: 2%;
+        left: -4%;
+        width: 49vw;
+        height: 43vw;
+      }
+    }
+  }
+  .vbox {
+    width: 100%;
+    height: 700px;
+    margin: auto 0;
+    .pic {
+      width: 90%;
+      height: 250px;
+      @include centeral;
+    }
+    .pic_cover {
+      display: none;
+      z-index: 0;
+      width: 100%;
+      height: 100%;
+      @include centeral;
+    }
+    .fade_out {
+      font-size: 4rem;
+      top: 22%;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin: auto;
+      text-align: center;
+    }
+    p {
+      font-size: $base_font_size;
+      top: 68%;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin: auto;
+      text-align: center;
+    }
+    .btn {
+      font-size: 24px;
+      line-height: 40px;
+      width: 140px;
+      top: 83%;  
+      @include center;
+    }
+  }
+  // over write for main_mamu
+  // .menu_bar {
+  //   font-size: $base_menu_font_sizePC;
+  // }
+  #menu {
+    a {
+      font-size: $character_ani_font_sizePC;
+      color:$base_letter_color;
+    }
+  }
+  // over write for animation_moon
+  .spinner {
+    @include spinner_size (105vw, 105vw);
+    .inner_spinner1 {
+      @include spinner_size (75vw, 75vw);
+    }
+    .inner_spiner2 {
+      @include spinner_size (45vw, 45vw);
+    }
+  }
+  // over write  for animation_typewriter
+  .charcter_Ani {
+    font-size: $character_ani_font_sizePC;
+    top: 40%;
+  }
+
+}

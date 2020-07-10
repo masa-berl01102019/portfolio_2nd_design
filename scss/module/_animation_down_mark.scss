@@ -1,0 +1,21 @@
+/* animation_down_mark.scss */
+
+.down_mark {
+  position: absolute;
+  bottom: 20%;
+  @include center;
+  width: 0;
+  height: 0;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-top: 40px solid #4d3c3c;
+  animation-name: scroll_down;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+@keyframes scroll_down {
+  0% { opacity: 1; }
+  50% { opacity: 0.5; transform: translateY(-10px);}
+  100% { opacity: 1; }
+}

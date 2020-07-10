@@ -1,0 +1,20 @@
+/* animation_ripple.scss */
+  .ripple {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #dbd9d7;
+    position: fixed;
+    z-index: -1;
+    top: 0%;
+    left: 0%;
+    animation-name: ripple;
+    animation-duration: 2s;
+    animation-delay: 4s;
+    animation-timing-function: cubic-bezier(0, 0.5, 1, 1);
+    animation-fill-mode: forwards;
+  }
+  @keyframes ripple {
+    0% { transform:none; box-shadow: 0 0 1px inset #3f3f3f; }
+    100% { transform:scale(200); }
+  }

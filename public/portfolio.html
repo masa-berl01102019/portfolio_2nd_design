@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>PORTFOLIO | MASA-STUDIO.NET</title>
+    <meta name="description" content="Introduction for web portfolio using JavaScript,Mysql and php.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+    <link rel="stylesheet" href="../css/portfolio.css">
+  </head>
+  <body>
+    <div id="grid_container">
+      <div id="cell_0">
+        <div class="menu_bar"> MASA STUDIO
+          <div id="open" class="humberger">
+            <div></div>
+            <div></div>
+          </div>
+        </div>
+        <div id="menu">
+          <div id="close" class="humberger">
+            <div></div>
+            <div></div>
+          </div>
+          <ul>
+            <li><a href="../index.html">HOME</a></li>
+            <li><a href="../public/about.html">ABOUT</a></li>
+            <li><a href="../public/portfolio.html">PORTFOLIO</a></li>
+            <li><a href="../public/blog.html">BLOG</a></li>
+            <li><a href="../public/contact.php">CONTACT</a></li>
+          </ul>
+        </div>
+      </div>
+      <div id="cell_1">
+        <div class="slideshow">
+          <img class="img_sp" src="../img/Main_image_portfolio.png">
+          <img class="img_pc" src="../img/sub_image_portfolio.png">
+          <div class="prev">&lt;</div>
+          <div class="main">
+            <a id="main_screan_url"><img id="main_screan"></a>
+          </div>
+          <div class="next">&gt;</div>
+          <div class="sub">
+            <ul class="thumbnails"></ul>
+          </div>
+       </div>
+      </div>
+      <div id="cell_2"></div>
+    </div>
+    <script src="../js/main.js"></script>
+    <script src="../js/portfolio_slideshow.js"></script>
+  </body>
+</html>

@@ -1,0 +1,42 @@
+#cell_1 > img {
+  max-width:100%;
+  height:auto;
+}
+#cell_2 > h1 {
+  font-size:4vh;
+  margin: 32px auto;
+}
+fieldset {
+  font-weight:bold;
+  width: 50%;
+  margin: 5px auto;
+  padding:3px;
+}
+fieldset > ul {
+  padding: 0;
+  list-style: none;
+  text-align: center;
+}
+img[src="../img/img_forBlog.jpg"] {
+  max-width:80%;
+  height:auto;
+}
+.center {
+  margin: 0 auto;
+  text-align: center;
+}
+.center > ol {
+  list-style-position: none;
+  padding: 0;
+}
+table {
+  margin: 5% 10%;
+  border-collapse: collapse;
+}
+th,td {
+  padding: 7px;
+  text-align:initial;
+}
+span.warning {
+  color: red;
+}

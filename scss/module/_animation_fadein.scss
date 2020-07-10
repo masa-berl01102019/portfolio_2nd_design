@@ -1,0 +1,18 @@
+/* animation_ajax_fadein.scss */
+.fadein {
+  animation-name: fadein;
+  animation-duration: 1.5s;
+  animation-fill-mode: forwards;
+  margin-right: 100%;
+  overflow: hidden;
+}
+$seconds: -0.1; // 変数の初期化は外で宣言する
+@for $i from 0 through 4 {
+  $seconds: $seconds + 0.2;
+  .delay_#{$i} { animation-delay: #{$seconds}s; } 
+}
+@keyframes fadein {
+  0% {opacity: 0; margin-right: 100%;}
+  60% {opacity: 0; margin-right: 30%;}
+  100% {opacity: 1; margin-right: 0;}
+}

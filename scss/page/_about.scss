@@ -1,0 +1,108 @@
+/* about.scss */
+#grid_container {
+  @include grid_common;
+  grid-template:
+  "main_menu" auto
+  "Personal_Information" auto
+  "Skills" auto
+  "Message" auto
+  "explanation_website" auto
+  / 100%;
+  > #cell_0 {
+    grid-area: main_menu;
+  }
+  > #cell_1 {
+    grid-area: Personal_Information;
+  }
+  > #cell_2 {
+    grid-area: Skills;
+  }
+  > #cell_3 {
+    grid-area: Message;
+  }
+  > #cell_4 {
+    grid-area: explanation_website;
+  }
+}
+#cell_1,#cell_2,#cell_3,#cell_4 {
+  display:grid;
+}
+.background_shape1, .background_shape2, .background_shape3, .background_shape4, .content {
+  grid-row: 1 /2;
+  grid-column:1;
+}
+.background_shape1 {
+  border-bottom: 20vw solid $BG_shape_accent_color;
+  border-left: 100vw solid $BG_shape_base_color;
+  border-top: 45vw solid $BG_shape_base_color;
+}
+.background_shape2 {
+  border-bottom: 30vw solid $BG_shape_base_color;
+  border-right: 100vw solid $BG_shape_accent_color;
+  border-top: 40vw solid $BG_shape_accent_color;
+}
+.background_shape3 {
+  border-bottom: 30vw solid $BG_shape_accent_color;
+  border-left: 100vw solid $BG_shape_base_color;
+  border-top: 30vw solid $BG_shape_base_color;
+}
+.background_shape4 {
+  width: 100%;
+  height: 100%;
+  background-color: $BG_shape_accent_color;
+}
+.content {
+  padding: 0 10% 25%;
+  h1 {
+    margin-top: 12%;
+  }
+  ul {
+    list-style: none;
+    padding-left: 0;
+  }
+}
+.content_adjust {
+  margin: 0 auto;
+  ol, p {
+    text-align: left;
+  }
+  p {
+    padding-left: 20px;
+  }
+}
+img[src="#{$profile_img}"] {
+  width:25%;
+  margin: 10px 30%;
+}
+h1 {
+  font-size: $h1_font_size_OR;
+}
+pre {
+  color: $base_letter_color;
+  font-size: $base_font_size;
+  font-weight: bold;
+}
+@include tablet {
+  .accordion_wrap_hide {
+    display:inline;
+  }
+  .accordion_wrap_btn {
+    > a {
+      > i {
+        display: none;
+      }
+    }
+  }
+}
+@include pc {
+  body{
+    font-size: $base_font_size_PC;
+  }
+  img[alt="image"] {
+    max-width:80%;
+    height:auto;
+  }
+  .content_adjust {
+    margin: 0 12%;
+  }
+}

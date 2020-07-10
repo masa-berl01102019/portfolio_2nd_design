@@ -1,0 +1,112 @@
+/* date_object_UI.scss */
+#grid_container {
+  @include grid_common;
+  grid-template:
+  "main_menu" auto
+  "stop_watch" auto
+  "calendar" auto
+  "count_down_advertisement" auto
+  / 100%;
+  -webkit-text-size-adjust: 100%;
+  > #cell_0 {
+    grid-area: main_menu;
+  }
+  > #cell_1 {
+    grid-area: stop_watch;
+  }
+  > #cell_2 {
+    grid-area: calendar;
+  }
+  > #cell_3 {
+    grid-area: count_down_advertisement;
+  }
+}
+.description {
+  width: 310px;
+  margin: 40px auto;
+  > p {
+    margin-top: 0;
+  }
+}
+@include tablet {
+  .description {
+    width: 510px;
+  }
+}
+/* stopwatch */
+.content {
+  width: 300px;
+  padding: 15px 0px;
+  margin: 30px auto;
+  color: #fff;
+  background: #161970;
+}
+.flex {
+  display: flex;
+  justify-content: space-between;
+  width: 270px;
+  margin: 0 auto;
+}
+#timer {
+  margin: 0 auto 3px;
+  width: 270px;
+  height: 120px;
+  line-height: 120px;
+  font-size: 60px;
+  background: rgba(93, 169, 234, 0.67);
+}
+#start, #stop, #reset {
+  width: 88px;
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+  font-weight: bold;
+  background: #5089da;
+  cursor: pointer;
+  user-select:none;
+}
+#cell_1 {
+  .inactive {
+    opacity: 0.6;
+  }
+}
+
+/* calendar */
+table {
+  margin:20px auto;
+  border: 2px solid black;
+  border-collapse: collapse;
+  background: #fff;
+}
+th {
+  background: skyblue;
+}
+th,td {
+  padding: 6px;
+  text-align: center;
+  color: black;
+}
+.calendar {
+  td:nth-child(1) {
+    color: red;
+  }
+  td:nth-child(7) {
+    color: blue;
+  }
+}
+.today {
+  font-weight: bold;
+}
+
+/* CountDownAdvertisement */
+#advertisement {
+  width: 270px;
+  padding: 7px;
+  margin: 0 auto;
+  background: tomato;
+  font-size: 20px;
+  color: #fff;
+  > h1, p {
+    margin: 0;
+  }
+}

@@ -1,0 +1,149 @@
+/* portfolio.scss */
+#grid_container {
+  @include grid_common;
+  grid-template:
+  "main_menu" auto
+  "slide_display" auto
+  "ajax_component" auto
+  / 100%;
+  > #cell_0 {
+    grid-area: main_menu;
+  }
+  > #cell_1 {
+    grid-area: slide_display;
+  }
+  > #cell_2 {
+    grid-area: ajax_component;
+    margin-top: 50px
+  }
+}
+.slideshow {
+  > img {
+    width: 100%;
+  }
+}
+.sub {
+  ul {
+    padding-left: 0;
+    list-style: none;
+    img {
+      width: 100%;
+      margin: 16px auto;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    }
+  }
+}
+
+@include sp {
+  .slideshow {
+    position: relative;
+  }
+  .main {
+    position: absolute;
+    width: 71%;
+    height: 35%;
+    top: 22%;
+    left: 14%;
+    z-index: 1;
+    background: white;
+    > a img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .prev, .next, .img_pc {
+    display: none;
+  }
+  .sub {
+    position: absolute;
+    width: 100%;
+    top: 79%;
+    z-index: 1;
+    .thumbnails {
+      display: flex;
+      flex-wrap: nowrap;
+      justify-content: center;
+      width: 100%;
+      li a {
+        pointer-events: none;
+        img {
+          width: 14vw;
+          margin: 3px;
+        }
+      }
+    }
+  }
+  .current{
+    opacity: 0.6;
+  }
+}
+
+@include tablet {
+  .prev, .next, .img_pc {
+    display: block;
+  }
+  .img_sp {
+    display: none;
+  }
+  .slideshow {
+    position: relative;
+  }
+  .main {
+    position: absolute;
+    width: 42.5%;
+    height: 54%;
+    top: 8%;
+    left: 28%;
+    z-index: 1;
+    background: white;
+    > a img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .direction {
+    position: absolute;
+    top: 15%;
+    font-size: 20vw;
+    line-height: 20vw;
+    color: #8e9398;
+    opacity: 0.5;
+    cursor: pointer;
+    user-select: none;
+    &:hover {
+      font-weight: bold;
+      opacity: 1;
+    }
+  }
+  .prev {
+    @extend .direction;
+    left: 5%;
+  }
+  .next {
+    @extend .direction;
+    right: 5%;
+  }
+  .sub {
+    position: absolute;
+    width: 100%;
+    top: 79%;
+    z-index: 1;
+    .thumbnails {
+      display: flex;
+      flex-wrap: nowrap;
+      justify-content: center;
+      width: 100%;
+      li a {
+        pointer-events: none;
+        img {
+          width: 14vw;
+          margin: 3px;
+        }
+      }
+    }
+  }
+  .current{
+    opacity: 0.6;
+  }
+}
+

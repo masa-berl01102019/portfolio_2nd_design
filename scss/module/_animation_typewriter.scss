@@ -1,0 +1,9 @@
+/* animation_typewriter.scss */
+.charcter_Ani {
+  padding-top: 40%;
+  font-size: 4.5vmax;
+  color: $accent_letter_color;
+}
+.typewriter, .blank{
+  opacity: 0;
+}

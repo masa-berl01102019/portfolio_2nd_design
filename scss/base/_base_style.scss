@@ -1,0 +1,38 @@
+/* base_style.scss */
+html{
+  font-size: $base_font_size_rate;
+}
+body {
+  font-family: 'EB Garamond','Arial','Hiragino Kaku Gothic ProN','ヒラギノ角ゴ ProN W3','メイリオ', Meiryo, sans-serif;
+  font-size: $base_font_size;
+  line-height: 1.6;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  background-color: $base_background_color;
+  background:$base_background_color;
+  color: $base_letter_color;
+}
+h1 {
+  font-size: $base_h1_font_size;
+}
+h2 {
+  font-size: $base_h2_font_size;
+}
+a {
+  text-decoration: none;
+
+  &:link {
+    color: $link_color;
+  }
+  &:visited {
+    color: $link_color;
+  }
+  &:hover{
+    opacity: 0.5;
+    transition: 0.4s;
+  }
+  &:active{
+    font-weight: bolder;
+  }
+}

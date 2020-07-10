@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>DATE_OBJ_UI | PORTFOLIO | MASA-STUDIO.NET</title>
+    <meta name="description" content="This is the UI using javascript">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+    <link rel="stylesheet" href="../../css/portfolio_js/date_object_UI.css">
+  </head>
+  <body>
+    <div id="grid_container">
+      <div id="cell_0">
+        <div class="menu_bar"> MASA STUDIO
+          <div id="open" class="humberger">
+            <div></div>
+            <div></div>
+          </div>
+        </div>
+        <div id="menu">
+          <div id="close" class="humberger">
+            <div></div>
+            <div></div>
+          </div>
+          <ul>
+            <li><a href="../../index.html">HOME</a></li>
+            <li><a href="../about.html">ABOUT</a></li>
+            <li><a href="../portfolio.html">PORTFOLIO</a></li>
+            <li><a href="../blog.html">BLOG</a></li>
+            <li><a href="../contact.php">CONTACT</a></li>
+          </ul>
+        </div>
+      </div>
+      <div id="cell_1" class="component">
+        <div class="content">
+          <div id="timer">00:00.000</div>
+          <div class="flex">
+            <div id="start">START</div>
+            <div id="stop" class="inactive">STOP</div>
+            <div id="reset" class="inactive">RESET</div>
+          </div>
+        </div>
+        <div class="description">
+          <h1>Description</h1>
+          <p>It's created instance of Date object that current time minus start time every 10 millisecond
+            by using setTimeout function.  At the same time, values are obtained from its instance
+            by using getMinutes function, getSeconds function and getMilliseconds function, it's been displayed
+            like counting up the elapsed time.</p>
+        </div>
+      </div>
+      <div id="cell_2" class="component">
+        <div>
+          <table class="calendar">
+            <thead>
+              <tr>
+                <th id="prevMonth"><a href="#">&laquo;</a></th>
+                <th id='calenderHeader'colspan="5"></th>
+                <th id="nextMonth"><a href="#">&raquo;</a></th>
+              </tr>
+              <tr>
+                <td>Sun</td>
+                <td>Mon</td>
+                <td>Tue</td>
+                <td>Wed</td>
+                <td>Thu</td>
+                <td>Fri</td>
+                <td>Sat</td>
+              </tr>
+            </thead>
+            <tbody>
+            </tbody>
+          </table>
+        </div>
+        <div class="description">
+          <h1>Description</h1>
+          <p>The maximum week of the calendar is 6 weeks, and a week is consist of 7 days. Therefore,
+            I created an array to store the numbers from 1 to 42 and considered day of the week from sunday to saturday as the numbers from 0 to 6.
+            Secondary, I obtained day of the week of the first day of month, and the last day of month.
+            Then, use the map function to subtract the value returned by the getDate function from each value in the array.
+            Finally, I created dynamic elements and inserted it from 1  to the last day of month using conditional branch to assign blanks to exceptions.</p>
+          </div>
+        </div>
+      <div id="cell_3" class="component">
+        <div>
+          <div id="advertisement">
+            <h1>FINAL SALE</h1>
+            <p>The price of all our product  is a half until 20th November 2020.</p>
+            <div id="countDownDisplay">00:00:00</div>
+          </div>
+        </div>
+        <div class="description">
+          <h1>Description</h1>
+          <p>I created two instances of Date object which is the current date and a specific date,
+            and subtracted the current date from the specific date every 1 second by using setTimeout function.
+            I calcurated the value returned in milliseconds unit and convert it to days, hours, minutes and seconds:
+            when I calculate the hours left, I convert the days left to hours unit, and subtract it from the differential days.
+            it's been displayed like counting down the elapsed time.</p>
+        </div>
+      </div>
+    </div>
+    <script src="../../js/main.js"></script>
+    <script src="../../js/portfolio_js/date_object_UI.js"></script>
+  </body>
+</html>

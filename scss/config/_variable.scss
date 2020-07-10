@@ -1,0 +1,58 @@
+// color for general
+$base_letter_color: #fff;
+$accent_letter_color: rgb(148, 113, 113);
+$base_background_color: linear-gradient(-180deg, hsl(214, 80%, 14%), hsl(213, 79%, 5%));
+$accent_background_color: linear-gradient(60deg, #a23745, rgb(148, 113, 113));
+$link_color: rgba(0, 123, 255, 1);
+$warning_color: rgb(255, 0, 0);
+
+// color for about_page
+$BG_shape_accent_color:  #364860;
+$BG_shape_base_color: #132a49;;
+
+// color for main_manu
+$menu_bar_background_color: rgba(0,0,0,0);
+
+// color for accordion_wrap_btn
+$accordion_btn_color: rgba(89, 136, 187, 0.81);
+
+// font size for general
+$base_font_size_rate: 62.5%;
+$base_font_size: 2rem; // 20px
+$base_font_size_PC: 2.4rem; // 24px
+$base_h1_font_size: 3.5rem; // 35px
+$base_h1_font_size_PC: 4.5vw; // 可変
+$base_h2_font_size: 2.6rem; // 30px
+
+// font size for main_manu
+$base_menu_font_size: 6.5vh; // sp ~ pc
+$base_menu_bar_font_size: 6vmin; // sp ~ pc
+
+// font size overwrite
+$h1_font_size_OR: 3.1rem; // 31px * about.html
+$h1_font_size_OR2: 2.8rem; // 28px * contact.php
+$character_ani_font_sizePC: 5rem; // index.html * menuのpc幅のサイズとしても使用してる
+
+// media query width
+$pc_width: 1025px; // PC
+$tablet_width: 568px; // tablet
+$sp_width: 567px;  // smart phone
+
+// image src
+// index.html
+$main_img3: "../img/Main_image_about.jpg";
+$main_img4: "../img/Main_image_portfolio.png";
+$main_img5: "../img/Main_image_blog.jpg";
+$main_img6: "../img/Main_image_contact.jpg";
+// about.html
+$profile_img: "../img/profile.jpg";
+// blog.html
+$sub_img2: "../img/Sub_image_blog.jpg";
+$category_img1: "../img/category_image/life.jpg";
+$category_img2: "../img/category_image/work.jpg";
+$category_img3: "../img/category_image/IT.jpg";
+$category_img4: "../img/category_image/study.jpg";
+$category_img5: "../img/category_image/travel.jpg";
+
+
+

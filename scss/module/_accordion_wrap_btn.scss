@@ -1,0 +1,27 @@
+/* accordion_wrap_btn.scss */
+.accordion_wrap_hide {
+  display:none;
+}
+.accordion_wrap_btn {
+  cursor: pointer;
+  width: 100%;
+  > a {
+    > i {
+      color: $accordion_btn_color;
+    }
+  }
+}
+
+// 600以上は表示しない設定
+// @media (min-width:600px) {
+//   .accordion_wrap_hide {
+//     display:inline;
+//   }
+//   .accordion_wrap_btn {
+//     > a {
+//       > i {
+//         display: none;
+//       }
+//     }
+//   }
+// }

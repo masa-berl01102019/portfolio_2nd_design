@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>RANDOM_FUNC_UI | PORTFOLIO | MASA-STUDIO.NET</title>
+    <meta name="description" content="This is the UI using javascript">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+    <link rel="stylesheet" href="../../css/portfolio_js/random_func_UI.css">
+  </head>
+  <body>
+    <div id="grid_container">
+      <div id="cell_0">
+        <div class="menu_bar"> MASA STUDIO
+          <div id="open" class="humberger">
+            <div></div>
+            <div></div>
+          </div>
+        </div>
+        <div id="menu">
+          <div id="close" class="humberger">
+            <div></div>
+            <div></div>
+          </div>
+          <ul>
+            <li><a href="../../index.html">HOME</a></li>
+            <li><a href="../about.html">ABOUT</a></li>
+            <li><a href="../portfolio.html">PORTFOLIO</a></li>
+            <li><a href="../blog.html">BLOG</a></li>
+            <li><a href="../contact.php">CONTACT</a></li>
+          </ul>
+        </div>
+      </div>
+      <div id="cell_1" class="component">
+        <div id="random_btn" ontouchstart="">PUSH</div>
+        <div class="description">
+          <h1>Description</h1>
+          <p>This random button's feature is below.
+            The probability which a particular word come out has been manipulated,
+            using a conditional branch to the value returned by Math.random function.</p>
+        </div>
+      </div>
+      <div id="cell_2" class="component">
+        <div id="random_ad"><img src="#"></div>
+        <div class="description">
+          <h1>Description</h1>
+          <p>This UI's structure is below.<br>
+            The URL of images has been managed by array.
+            Array's index is randomly created and switched every 2 seconds by using Math.random function and setTimeout function.
+            Assign array[index] to the src attribute of the img element.</p>
+          </div>
+        </div>
+      <div id="cell_3" class="component">
+        <div class="boxes"></div>
+        <div class="boxes"></div>
+        <div class="boxes"></div>
+        <div class="description">
+          <h1>Description</h1>
+          <p>This random animation's feature is that it's created random integer
+             every 3 seconds by using Math.random function and setTimeout function,
+             Then the values returned is assigned animation by using conditional branch.</p>
+        </div>
+      </div>
+    </div>
+    <script src="../../js/main.js"></script>
+    <script src="../../js/portfolio_js/random_func_UI.js"></script>
+  </body>
+</html>

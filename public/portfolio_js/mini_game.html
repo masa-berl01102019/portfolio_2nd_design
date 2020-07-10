@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>MINI_GAME | PORTFOLIO | MASA-STUDIO.NET</title>
+    <meta name="description" content="This is the mini game using javascript">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+    <link rel="stylesheet" href="../../css/portfolio_js/mini_game.css">
+  </head>
+  <body>
+    <div id="grid_container">
+      <div id="cell_0">
+        <div class="menu_bar"> MASA STUDIO
+          <div id="open" class="humberger">
+            <div></div>
+            <div></div>
+          </div>
+        </div>
+        <div id="menu">
+          <div id="close" class="humberger">
+            <div></div>
+            <div></div>
+          </div>
+          <ul>
+            <li><a href="../../index.html">HOME</a></li>
+            <li><a href="../about.html">ABOUT</a></li>
+            <li><a href="../portfolio.html">PORTFOLIO</a></li>
+            <li><a href="../blog.html">BLOG</a></li>
+            <li><a href="../contact.php">CONTACT</a></li>
+          </ul>
+        </div>
+      </div>
+      <div id="cell_1" class="component">
+        <div class="content">
+          <textarea id="target" type="text" autocomplete="off" spellcheck="false" oncopy="return false" onpaste="return false">click to start</textarea>
+          <p class="info">
+            correct typing: <span id="correct">0</span>,
+            wrong typing: <span id="wrong">0</span><br>
+            time left: <span id="timer">2:00.00</span>
+          </p>
+        </div>
+        <div class="description">
+          <h1>Description</h1>
+          <p>This structure of mini game is below.<br>
+            <span class="accordion_wrap_hide">The words are stored in an array and shuffled by using Fisher–Yates shuffle algorithm in order to create random unbiased permutation
+            so that the same word is not repeated in a single play.
+            Each single character which user typed is taken from the event object of keydown and is validated every nth String object (the displayed word)
+            in order from the top. when it's correct, it's replaced in '_' , and move to the next character.
+            After the game, it shows the result that how much correctly user was able to type the words within the limited time by showing accuracy rate.</span></p>
+          <div class="accordion_wrap_btn"><a href=""><i class="fas fa-chevron-down fa-2x"></i></a></div>
+        </div>
+      </div>
+      <div id="cell_2" class="component">
+        <div>
+          <div class="container">
+            <p id="question"></p>
+            <ul id="choices"></ul>
+            <div id="btn" class="disabled">NEXT</div>
+            <div id="result" class="hidden">
+              <p></p>
+              <a href="">Replay?</a>
+            </div>
+          </div>
+        </div>
+        <div class="description">
+          <h1>Description</h1>
+          <p>This structure of mini game is below.<br>
+            <span class="accordion_wrap_hide">The questions and choices of answer are stored in multidimensional arrays, and each of them are shuffled by using Fisher–Yates shuffle algorithm.
+            Basically, objects is copied as a referance to the values, therefore I have assigned it to a variable in such a format:
+            variable = [ ... array ] so that it's not rewritten original multidimensional arrays when the choices of answer is displayed in random order.
+            The reason why I don't wanna rewrite it is because the location of the correct answer in multidimensional arrays is fixed
+            so that it can be referenced to it when the choices is clicked, it's validated whether both textcontents are the same.</span></p>
+          <div class="accordion_wrap_btn"><a href=""><i class="fas fa-chevron-down fa-2x"></i></a></div>
+        </div>
+      </div>
+      <div id="cell_3" class="component">
+        <div>
+          <main></main>
+          <div id="spin">SPIN</div>
+        </div>
+        <div class="description">
+          <h1>Description</h1>
+          <p>This structure of mini game is below.<br>
+            <span class="accordion_wrap_hide">It's adopted object oriented design using class object.
+            It's created dynamically elements except spin button by constructor method when its class instance is created.
+            The url of image as a string is stored in an array.
+            Then it's randomly assigned it to src attribute every 50 milliseconds by using setTimeout function when the spin button is clicked.
+            The class instance which is designed a image panel with stop button, has been created three in an array.
+            It's validated whether the value of src attribute of one class instance is different from the others when the all of them is stopped.
+            Then if it's not same, the class instance is gatten dark by adding it to css class.
+            Therefore it works like a slot machine.</span></p>
+          <div class="accordion_wrap_btn"><a href=""><i class="fas fa-chevron-down fa-2x"></i></a></div>
+        </div>
+      </div>
+      <div id="cell_4" class="component">
+        <div id="timer2">00.00</div>
+        <div id="container">
+          <ul id="board">
+          </ul>
+        </div>
+        <div id="button">START</div>
+        <div class="description">
+          <h1>Description</h1>
+          <p>This structure of mini game is below.<br>
+            <span class="accordion_wrap_hide">It's adopted object oriented design using two class objects.
+            It's created dynamically elements by constructor function when its class instance which is controlling panels is created ( Board class ).
+            Those elements creating panels has been stored in an array.
+            It's randomly picked from the array which is stored the numbers from 1 to 16, then it's inserted into the panel's array by using splice function when start button is clicked.
+            The other hand, the class instance which is controlling game ( Game class ) is managing start buttons function and timer function.
+            The Board class instance has been called in Game class's constructor function so that the panels can be displayed when the Game class instance is created.
+            "this" is passed as a argument when Board class instance is created, then it's received as a property in Board class's constructor function.
+            Finally, it's been encapsulated by using method when each class object access properties of the other class.</span></p>
+          <div class="accordion_wrap_btn"><a href=""><i class="fas fa-chevron-down fa-2x"></i></a></div>
+        </div>
+      </div>
+    </div>
+    <script src="../../js/main.js"></script>
+    <script src="../../js/portfolio_js/mini_game.js"></script>
+  </body>
+</html>

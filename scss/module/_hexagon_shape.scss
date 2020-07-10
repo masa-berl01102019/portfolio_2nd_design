@@ -1,0 +1,54 @@
+/* hexagon_shape.scss */
+
+// create hexagon
+.hexagon {
+  position: relative;
+  width: 20%;
+  &::before {
+    content: '';
+    display: block;
+    padding-top: 115.470053838%;; // 4 / (2√3) * 100 アスペクト比 
+    // padding-top: 86.602540378%;  2√3 / 4 * 100 アスペクト比 長方形の縦横比を固定してレスポンシブ対応
+  }
+}
+.hexagon_inner {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.hexagon_inner1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  @extend .hexagon_inner;
+  transform: rotate(60deg);
+}
+.hexagon_inner2 {
+  @extend .hexagon_inner;
+  transform: rotate(60deg);
+}
+.hexagon_inner3 {
+  @extend .hexagon_inner;
+  transform: rotate(-120deg);
+}
+.hexagon_inner_image {
+  background: blue; // ここにbackground: url('') center / cover no-repeat; で挿入
+  @extend .hexagon_inner;
+  a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    font-size:0;
+    &:hover {
+      opacity: 1;
+      background: black;
+      color:white;
+      font-size: 0.9em;
+      line-height: 20vw;
+    }
+  }
+}
+
+

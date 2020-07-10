@@ -1,0 +1,58 @@
+/* animation_random_transform.scss */
+
+/* random_transform */
+.boxes {
+  width: 100px;
+  height: 100px;
+  margin: 5% auto;
+  transition-duration: 3s;
+}
+.move1{
+  transform: rotateX(360deg);
+}
+.move2{
+  transform: rotateY(360deg);
+}
+.egg_shape{
+  border-radius:  60% 60% 50% 50% ;
+  height: 140px;
+}
+
+/* gradation_ring */
+.gradation_ring {
+  height:  100px;
+  width:  100px;
+  border-radius:  50%;
+  background: linear-gradient(-90deg, #FF00A1, #F6FF00);
+  animation: anime 2s linear infinite;
+  position: relative;
+  &:before {
+    content: "";
+    height:  80px;
+    width:  80px;
+    display:  block;
+    background-color: #041122;
+    border-radius: 50%;
+    margin: 0px auto;
+    position: relative;
+    top: 10px;
+  }
+}
+@keyframes anime {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* transform_diagram*/
+.transform_diagram {
+  animation-name: anime2;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+@keyframes anime2 {
+  0% { transform: none; }
+  50% { transform: rotate(270deg) scale(0.8); border-radius: 50%; }
+  80% { transform: rotate(320deg) scale(1.5); }
+  100% { transform: rotate(360deg); }
+}

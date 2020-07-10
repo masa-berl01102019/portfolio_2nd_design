@@ -1,0 +1,17 @@
+/* animation_fade_lean.scss */
+
+.fadein_lean {
+  animation-name: fadein_lean;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+$seconds: -0.1; // 変数の初期化は外で宣言する
+@for $i from 0 through 4 {
+  $seconds: $seconds + 0.2;
+  .delay_#{$i} { animation-delay: #{$seconds}s; } 
+}
+@keyframes fadein_lean {
+  0% { opacity: 0; transform: rotateX(90deg); }
+  40% { opacity: 0; transform: rotateX(60deg); }
+  100% { opacity: 1; transform: rotateX(0deg); }
+}
